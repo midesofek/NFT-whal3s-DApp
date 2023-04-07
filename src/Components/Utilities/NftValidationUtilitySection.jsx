@@ -88,6 +88,7 @@ const NftValidationUtilitySection = () => {
                   step === NftValidationUtility.STEP_TOKEN_SELECTED) && (
                   <SelectNft utility={utility} />
                 )}
+                {<ClaimNft utility={utility} />}
                 {step === NftValidationUtility.STEP_CLAIMED && (
                   <ClaimedNft utility={utility} />
                 )}
