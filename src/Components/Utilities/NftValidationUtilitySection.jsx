@@ -63,10 +63,10 @@ const NftValidationUtilitySection = () => {
             <div className="border border-zinc-300 p-5 flex flex-col">
               <div className="flex justify-between text-sm font-medium text-gray-900 mb-2.5">
                 <span>Claiming utility...</span>
-                <span>
+                {/* <span>
                   Claims: {utility?.details?.engagements_count ?? 0}/
                   {utility?.details?.max_engagements ?? "--"}
-                </span>
+                </span> */}
               </div>
               <NftValidationUtilityProgressBar
                 currentStep={step ?? 1}
@@ -88,7 +88,9 @@ const NftValidationUtilitySection = () => {
                   step === NftValidationUtility.STEP_TOKEN_SELECTED) && (
                   <SelectNft utility={utility} />
                 )}
-                {<ClaimNft utility={utility} />}
+                {step === NftValidationUtility.STEP_RESERVED && (
+                  <ClaimNft utility={utility} />
+                )}
                 {step === NftValidationUtility.STEP_CLAIMED && (
                   <ClaimedNft utility={utility} />
                 )}

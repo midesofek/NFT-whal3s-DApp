@@ -25,7 +25,10 @@ const SelectNft = ({ utility }) => {
           <div
             className={`relative flex items-start space-x-3 border border-gray-300 bg-white px-6 py-5 shadow-sm hover:border-gray-400 `}
           >
-            <p>You dont own an NFT. Claim one with the button above.</p>
+            <p>
+              Oops! You don't own an NFT. Claim one with the giant "Claim"
+              button below.
+            </p>
           </div>
         )}
         {utility?.nfts?.nfts?.length > 0 && (
