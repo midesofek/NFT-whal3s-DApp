@@ -40,6 +40,13 @@ export default function NftValidationUtilityProgressBar({ currentStep }) {
           >
             Claimed
           </div>
+          <div
+            className={`text-right ${
+              currentStep >= 5 ? "text-whal3s-600" : ""
+            }`}
+          >
+            Play Game
+          </div>
         </div>
       </div>
     </div>
