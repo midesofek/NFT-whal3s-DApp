@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Whal3s, { NftValidationUtility } from "@whal3s/whal3s.js";
 import NftValidationUtilityProgressBar from "../ProgressBars/NftValidationUtilityProgressBar";
+import "../ProgressBars/ProgressBar.css";
 import { Web3Button, useContract, useContractWrite } from "@thirdweb-dev/react";
 import Uninitialized from "./NftValidationUtility/0_Uninitialized";
 import ConnectWallet from "./NftValidationUtility/1_ConnectWallet";
@@ -52,7 +53,10 @@ const NftValidationUtilitySection = () => {
 
   return (
     <>
-      <div className="border border-zinc-300 p-5 md:p-10 ">
+      <div
+        style={{ backgroundColor: "white" }}
+        className="progress-texts border border-zinc-300 p-5 md:p-10 "
+      >
         <hr className="my-5" />
         {utility ? (
           <div className="grid gap-5 md:gap-10 grid grid-cols-1 md:grid-cols-[1fr_2fr]">
@@ -107,13 +111,13 @@ const NftValidationUtilitySection = () => {
         <Web3Button
           colorMode="light"
           className={` inline-flex justify-center items-center rounded-md border border-transparent bg-whal3s-600 disabled:bg-whal3s-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-whal3s-700 focus:outline-none focus:ring-2 focus:ring-whal3s-500 focus:ring-offset-2`}
-          accentColor="#38003a"
+          accentColor="#411111"
           contractAddress="0xb52B4b6401BD42fcE41a74566ab41BB8dece8E6e"
           action={(contract) => {
             contract.erc721.claim(1);
           }}
         >
-          Claim
+          Claim NFT
         </Web3Button>
       </div>
     </>

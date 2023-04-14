@@ -1,4 +1,6 @@
 import { FaDiscord } from "react-icons/fa";
+import "../../App.css";
+
 const navigation = {
   main: [
     { name: "Privacy", href: "https://www.whal3s.xyz/privacy.html" },
@@ -51,10 +53,10 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
+    <footer className="footer-color">
+      <div className="texts mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 flex justify-center space-x-12"
+          className="-mb-6 flex justify-center space-x-12 texts"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -68,7 +70,7 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="mt-10 flex justify-center space-x-10 texts">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -80,7 +82,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="texts mt-10 text-center text-xs leading-5 text-gray-500">
           &copy; Built by Mide Sofek via UseWhal3s. All rights reserved.
         </p>
       </div>

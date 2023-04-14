@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../Button";
 import notify from "../../../utils/notify";
+import "../../ProgressBars/ProgressBar.css";
 
 const ConnectWallet = ({ utility }) => {
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ const ConnectWallet = ({ utility }) => {
       });
   };
   return (
-    <div className="h-full flex flex-col">
+    <div className="progress-texts h-full flex flex-col">
       <p>
         {" "}
         Simply follow the above steps to Claim your Exclusive{" "}
